@@ -17,11 +17,7 @@ pipeline {
 
     stages {
 
-        stage("Build"){
-            steps{
-                sh "sbt run"
-            }
-        }
+
         stage('Compile') {
             steps {
                 echo "Compiling..."
@@ -42,6 +38,12 @@ pipeline {
                 sh "sbt package"
             }
         }
+
+        stage("Build"){
+                    steps{
+                        sh "sbt run"
+                    }
+                }
 
     }
 }
