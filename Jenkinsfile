@@ -2,7 +2,7 @@ def jenkinsSlaveImage = "cne-repos1.us.oracle.com:7744/apps/cgbu/analytics/featu
 def component = "sjs"
 def ms_name = "sjs"
 
-library identifier: 'common-utils@develop', retriever: modernSCM(
+/*library identifier: 'common-utils@develop', retriever: modernSCM(
         [$class       : 'GitSCMSource',
          remote       : 'ssh://git@cloudlab.us.oracle.com:2222/OCAS/common-utils.git',
          credentialsId: 'Jenkins'])
@@ -10,7 +10,7 @@ library identifier: 'common-utils@develop', retriever: modernSCM(
 library identifier: getLibraryName(), retriever: modernSCM(
         [$class       : 'GitSCMSource',
          remote       : 'ssh://git@cloudlab.us.oracle.com:2222/OCAS/common-jenkins.git',
-         credentialsId: 'Jenkins'])
+         credentialsId: 'Jenkins'])*/
 
 pipeline {
     agent any
